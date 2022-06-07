@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import java.io.Serializable;
 import java.time.Instant;
 
@@ -20,6 +21,7 @@ public class ClientDTO implements Serializable {
         @Getter @Setter private String name;
         @Getter @Setter private String cpf;
         @Getter @Setter private Double income;
+        @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
         @Getter @Setter private Instant birthDate;
         @Getter @Setter private Integer children;
 
